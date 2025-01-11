@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/http-server/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/http-server/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/http-server",
+  "projects": {
+    "http-server": {
+      "type": "application",
+      "root": "apps/http-server",
+      "entryFile": "main",
+      "sourceRoot": "apps/http-server/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/http-server/tsconfig.app.json"
+      }
+    },
+    "user-answers": {
+      "type": "application",
+      "root": "apps/user-answers",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-answers/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-answers/tsconfig.app.json"
+      }
+    },
+    "survey": {
+      "type": "application",
+      "root": "apps/survey",
+      "entryFile": "main",
+      "sourceRoot": "apps/survey/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/survey/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    },
+    "user": {
+      "type": "application",
+      "root": "apps/user",
+      "entryFile": "main",
+      "sourceRoot": "apps/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user/tsconfig.app.json"
+      }
+    },
+    "auth-lib": {
+      "type": "library",
+      "root": "libs/auth-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth-lib/tsconfig.lib.json"
+      }
+    },
+    "organizations": {
+      "type": "application",
+      "root": "apps/organizations",
+      "entryFile": "main",
+      "sourceRoot": "apps/organizations/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/organizations/tsconfig.app.json"
+      }
+    },
+    "notifications": {
+      "type": "library",
+      "root": "libs/notifications",
+      "entryFile": "index",
+      "sourceRoot": "libs/notifications/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/notifications/tsconfig.lib.json"
+      }
+    },
+    "survey-lib": {
+      "type": "library",
+      "root": "libs/survey-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/survey-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/survey-lib/tsconfig.lib.json"
+      }
+    }
+  }
+}
