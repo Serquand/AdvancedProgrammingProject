@@ -88,3 +88,19 @@ Then, you'll have to run the following command to start the application:
 ```
 $ npm run dev
 ```
+
+## Creation of the first administrator
+
+In order to use the application, you'll need to create the first administrator.
+To do it, you can run the following CURL command:
+```
+curl --location 'http://localhost:HTTP_SERVER_PORT/user/register-first-admin' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "your_email",
+    "password": "your_password",
+    "firstName": "your_first_name",
+    "lastName": "your_last_name",
+    "role": "admin"
+}'
+```
